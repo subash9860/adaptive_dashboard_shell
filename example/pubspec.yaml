@@ -3,8 +3,6 @@ description: Example app for the adaptive_dashboard_shell package.
 publish_to: "none"
 version: 1.0.0
 
-resolution: workspace
-
 environment:
   sdk: ^3.8.0
   flutter: ">=3.32.0"

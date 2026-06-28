@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Fix CHANGELOG versioning for pub.dev validation.
+
 ## 0.1.1
 
 - Add GitHub Actions CI/CD for automated publishing to pub.dev.

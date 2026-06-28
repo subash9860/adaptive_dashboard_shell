@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Updates and improvements.
+
 ## 0.1.2
 
 - Fix CHANGELOG versioning for pub.dev validation.

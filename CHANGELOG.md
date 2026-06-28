@@ -1,3 +1,9 @@
+## 0.1.1
+
+- Add GitHub Actions CI/CD for automated publishing to pub.dev.
+- Fix example pubspec.yaml workspace resolution.
+- Update pubspec metadata (repository, homepage).
+
 ## 0.1.0
 
 - Initial release.

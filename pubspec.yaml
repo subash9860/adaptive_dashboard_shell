@@ -1,12 +1,8 @@
 name: adaptive_dashboard_shell
-description: >-
-  Adaptive dashboard shell — a collapsible, shadcn-style sidebar rail on desktop
-  and tablet that switches to a bottom navigation bar on mobile, wrapping your
-  routed content. Presentational and router-agnostic, with zero third-party
-  dependencies.
-version: 0.1.0
-# Update this to your repository before publishing — it boosts the pub.dev score.
-# repository: https://github.com/your-org/adaptive_dashboard_shell
+description: Adaptive dashboard shell with collapsible sidebar and mobile bottom nav.
+version: 1.1.0
+repository: https://github.com/subash9860/adaptive_dashboard_shell
+homepage: https://github.com/subash9860/adaptive_dashboard_shell
 
 environment:
   sdk: ^3.8.0

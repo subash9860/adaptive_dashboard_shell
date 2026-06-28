@@ -14,6 +14,10 @@ wrapping your routed content.
   your nav items however you like and pass them in.
 - **Zero third-party dependencies** — pure Flutter / Material.
 
+## Demo
+
+![Adaptive Dashboard Shell Demo](assets/demo.gif)
+
 ## Install
 
 ```yaml

@@ -1,4 +1,4 @@
-.PHONY: version-patch version-minor version-major publish help
+.PHONY: version-patch version-minor version-major publish push help
 
 # Get current version from pubspec.yaml
 CURRENT_VERSION := $(shell grep '^version:' pubspec.yaml | sed 's/version: //')
@@ -59,3 +59,22 @@ publish:
 		git push origin v$$version; \
 		echo "✓ Pushed version $$version to GitHub"; \
 		echo "  GitHub Actions will auto-publish to pub.dev"'
+
+push:
+	@bash -c 'set -e; \
+		current=$$(grep "^version:" pubspec.yaml | sed "s/version: //"); \
+		major=$$(echo $$current | cut -d. -f1); \
+		minor=$$(echo $$current | cut -d. -f2); \
+		patch=$$(echo $$current | cut -d. -f3); \
+		patch=$$(($$patch + 1)); \
+		new_version="$$major.$$minor.$$patch"; \
+		sed -i "" "s/^version:.*/version: $$new_version/" pubspec.yaml; \
+		sed -i "" "1s/^/## $$new_version\n\n- Updates and improvements.\n\n/" CHANGELOG.md; \
+		git add pubspec.yaml CHANGELOG.md; \
+		git commit -m "Bump version to $$new_version"; \
+		git tag v$$new_version; \
+		echo "✓ Bumped to $$new_version"; \
+		git push origin main; \
+		git push origin v$$new_version; \
+		echo "✓ Pushed to GitHub"; \
+		echo "  GitHub Actions publishing to pub.dev..."'

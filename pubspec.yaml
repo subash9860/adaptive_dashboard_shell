@@ -1,0 +1,24 @@
+name: adaptive_dashboard_shell
+description: >-
+  Adaptive dashboard shell — a collapsible, shadcn-style sidebar rail on desktop
+  and tablet that switches to a bottom navigation bar on mobile, wrapping your
+  routed content. Presentational and router-agnostic, with zero third-party
+  dependencies.
+version: 0.1.0
+# Update this to your repository before publishing — it boosts the pub.dev score.
+# repository: https://github.com/your-org/adaptive_dashboard_shell
+
+environment:
+  sdk: ^3.8.0
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:

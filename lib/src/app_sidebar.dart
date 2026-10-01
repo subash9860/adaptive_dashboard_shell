@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'nav_models.dart';
 import 'sidebar_footer.dart';
 import 'sidebar_header.dart';
@@ -82,14 +83,15 @@ class AppSidebar extends StatelessWidget {
                 titleStyle: titleStyle,
               ),
               Expanded(
-                child: Scrollbar(
-                  child: ListView(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 8,
-                    ),
-                    children: [for (final item in items) _navItem(item)],
+                // No explicit Scrollbar: one without a controller falls back to
+                // PrimaryScrollController, which desktop/web ListViews don't
+                // attach to. ScrollBehavior adds a correctly wired one there.
+                child: ListView(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 8,
                   ),
+                  children: [for (final item in items) _navItem(item)],
                 ),
               ),
               SidebarFooter(

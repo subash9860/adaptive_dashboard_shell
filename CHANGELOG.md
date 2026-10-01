@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Fix "Scrollbar's ScrollController has no ScrollPosition attached" when hovering the sidebar on web/desktop.
+
 ## 0.1.3
 
 - Updates and improvements.
